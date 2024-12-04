@@ -25,7 +25,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-spec pytest-describe
+          pip install pytest pytest-spec pytest-describe pytest-mock
 
       - name: Run Pytest
         run: pytest --spec test_battery.py
@@ -47,7 +47,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install behave behave-webdriver
-          
+      
+      - name: Install Chrome Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libatk-bridge2.0-0 libnspr4
+
       - name: Install chromedriver
         uses: nanasess/setup-chromedriver@master
 
