@@ -22,6 +22,6 @@ Scenario: Testing a few things out
 Scenario: Trying other things out 
     Given I open the url "https://byjus.com/herons-calculator/"
     When I move to element "//*[@id="header-secondary-menu"]/div[5]"
-    Then I wait on element "//*[@id='header-secondary-menu']/div[5]/ul/li[1]" for 2000ms to be visible
+    Then I wait on element "//*[@id='header-secondary-menu']/div[5]/ul/li[1]" for 2000ms to be enabled
     When I click on the element "//*[@id="header-secondary-menu"]/div[5]/ul/li[1]"
     Then I expect that element "/html/body/div[1]/div[1]/div[1]/div/div[4]/h1" contains the text "Addition Calculator"
