@@ -23,7 +23,7 @@ def step_type_text_into_element_with_xpath(context, text, xpath):
 @then('I should see "{text}" text in the element with the xpath "{theXPath}"')
 def step_verify_text_inside_element_with_xpath(context, text, theXPath):
     #element = context.behave_driver.get_element(theXPath, 'xpath')
-    elements_text = context.behave_driver.get_element_text(theXPath) # or this works too element.text
+    elements_text = context.behave_driver.get_element_text(theXPath) # or this works too: element.text
     assert elements_text == text, f"Expected {text}, but found {elements_text}."
 
 

@@ -3,7 +3,7 @@ As an aspiring mathematician
 I should be able to calculate the area of a triangle
 So that I can chat with my math friends like a pro
 
-@skip
+
 Scenario: I can calculate the area of a triangle
     Given I open the url "https://byjus.com/herons-calculator/"
     When I set "6" to the inputfield "//*[@id='a']"
@@ -11,7 +11,7 @@ Scenario: I can calculate the area of a triangle
     And I set "10" to the inputfield "//*[@id="c"]"
     And I click on the element with the xpath "//*[@id="post-948257"]/div[1]/p[5]/input"
     Then I expect that element "//*[@id='_d']" contains the text "24"
-@skip
+
 Scenario: Testing a few things out
     Given I open the url "https://byjus.com/herons-calculator/"
     When I scroll down the page to element with the xpath "//*[@id="comment-for-desktop"]/div[2]"
